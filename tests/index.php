@@ -3,4 +3,6 @@
 
 	$myUnderbits = new Underbits\Underbits;
 	print_r($myUnderbits);
+	
+	$a = 0;
 ?>
