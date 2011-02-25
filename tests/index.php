@@ -8,8 +8,6 @@
 	}
 	
 	include_once('../underbits.php');
-	
-	$myUB = new \Underbits\Underbits;
 		
 	echo '<h2>Setup:</h2>';
 	
