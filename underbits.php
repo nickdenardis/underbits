@@ -2,9 +2,11 @@
 namespace Underbits;
 
 // Determine our absolute document root
-define('DOC_ROOT', realpath(dirname(__FILE__) . '/../'));
+defined('DIR_ROOT') or define('DIR_ROOT', realpath(dirname(__FILE__) . '/') . '/');
 
-class Underbits {
+include_once(DIR_ROOT . 'lib/functions.inc.php');
+
+class Underbits extends Utilities {
 	
 }
 ?>

@@ -1,6 +1,23 @@
 <?php
-	include_once('../underbits.php');
+	function h($text){
+		return 'H: ' . htmlspecialchars(stripslashes($text));
+	}
 
-	$myUnderbits = new Underbits\Underbits;
-	print_r($myUnderbits);
+	function RunTest($results, $expected){
+		return ($results == $expected);
+	}
+	
+	include_once('../underbits.php');
+	
+	$myUB = new \Underbits\Underbits;
+		
+	echo '<h2>Setup:</h2>';
+	
+	$myUB->p(DIR_ROOT);
+	$myUB->p('"'. __NAMESPACE__. '"');
+	
+	$myUB->p($myUB);
+	
+	$myUB->p($myUB->h('Testing'));
+	$myUB->p(h('Testing'));
 ?>
