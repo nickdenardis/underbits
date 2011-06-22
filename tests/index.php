@@ -18,4 +18,12 @@
 	
 	$myUB->p($myUB->h('Testing'));
 	$myUB->p(h('Testing'));
+	
+	if(get_magic_quotes_gpc()){
+   		echo 'Magic Quotes are On! Please turn off if possible';
+    }
+    
+    echo '<pre>';
+	debug_print_backtrace();
+	echo '</pre>';
 ?>
