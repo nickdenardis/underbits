@@ -11,8 +11,8 @@
 		
 	echo '<h2>Setup:</h2>';
 	
-	$myUB->p(DIR_ROOT);
-	$myUB->p('"'. __NAMESPACE__. '"');
+	$myUB->p('DIR_ROOT: ' . DIR_ROOT);
+	$myUB->p('Namespace: "'. __NAMESPACE__. '"');
 	
 	$myUB->p($myUB);
 	
