@@ -43,4 +43,14 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
     $stripslashes_deep($_COOKIE, $stripslashes_deep);
     $stripslashes_deep($_REQUEST, $stripslashes_deep);
 }
+
+/**
+ * Return HTML friendly text
+ *
+ */
+if (!function_exists('h')){
+	function h($text){
+		return htmlspecialchars(stripslashes($text));
+	}
+}
 ?>
