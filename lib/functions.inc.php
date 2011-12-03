@@ -48,7 +48,9 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
  * Return HTML friendly text
  *
  */
-function h($text){
-	return htmlspecialchars(stripslashes($text));
+if (!function_exists('h')){
+	function h($text){
+		return htmlspecialchars(stripslashes($text));
+	}
 }
 ?>
